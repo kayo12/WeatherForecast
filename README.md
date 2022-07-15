@@ -30,10 +30,14 @@ Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
 
 Since making a commit is something that a developer should know how to make it right, we are using Conventional Commits messages, following the template below:
 
-<type>[optional scope]: <description>
+`<type>`[optional scope]: `<description>`
 
 [optional body]
 
 [optional footer(s)]
+
+## Commitizen
+
+For making it simple, may be a good idea see the [Commitizen](https://commitizen-tools.github.io/commitizen/) guide;
 
 
