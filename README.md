@@ -1,4 +1,4 @@
-# WeaterForecast in Vue 3 + Typescript + Vite
+# WeatherForecast in Vue 3 + Typescript + Vite
 
 This template should get help you started developing with Vue 3 and Typescript in Vite.
 
@@ -36,8 +36,8 @@ Since making a commit is something that a developer should know how to make it r
 
 [optional footer(s)]
 
-## Commitizen
+## VsCode Git Commit Message
 
-For making it simple, may be a good idea see the [Commitizen](https://commitizen-tools.github.io/commitizen/) guide;
+For making it simple, may be a good idea see the [VsCode Git Commit Message extension](https://marketplace.visualstudio.com/items?itemName=rioukkevin.vscode-git-commit) guide;
 
 
