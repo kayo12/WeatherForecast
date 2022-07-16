@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, useSlots } from "vue";
 
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
@@ -22,15 +22,20 @@ const showToast = () => {
   }).showToast();
 };
 const count = ref(0);
-const now = dayjs();
+const now = ref(dayjs());
+
+const updateTime = () => {
+  now.value = dayjs();
+};
 </script>
 
 <template>
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
     <button type="button" @click="showToast()">Toast Test</button>
+    <button type="button" @click="updateTime()">Update Time</button>
     <p>Vue + Toastify funcionando :D</p>
-    <p>{{ now.format("YYYY/MM/DD HH:MM:ss") }}</p>
+    <p>{{ now.format("YYYY-MM-DD HH:MM:ss") }}</p>
   </div>
   <p>
     <strong>Feito com café e insônia by:</strong>
