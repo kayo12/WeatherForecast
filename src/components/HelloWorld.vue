@@ -3,6 +3,7 @@ import { ref } from "vue";
 
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
+import dayjs from "dayjs";
 
 const showToast = () => {
   Toastify({
@@ -20,19 +21,16 @@ const showToast = () => {
     onClick: function () {}, // Callback after click
   }).showToast();
 };
-
-defineProps<{ msg: string }>();
-
 const count = ref(0);
+const now = dayjs();
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
     <button type="button" @click="showToast()">Toast Test</button>
     <p>Vue + Toastify funcionando :D</p>
+    <p>{{ now.format("YYYY/MM/DD HH:MM:ss") }}</p>
   </div>
   <p>
     <strong>Feito com café e insônia by:</strong>
