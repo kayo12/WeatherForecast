@@ -40,4 +40,14 @@ Since making a commit is something that a developer should know how to make it r
 
 For making it simple, may be a good idea see the [VsCode Git Commit Message extension](https://marketplace.visualstudio.com/items?itemName=rioukkevin.vscode-git-commit) guide;
 
+## Api Usage
+
+For this project we are going to use the [OpenWeatherMap](https://openweathermap.org) API for two main reasons:
+
+1- That API generously free plan allows us up to 60 calls/minute - and for a study webapp that is awesome;
+2- The Free Data is updated every two hours - witch is super okay for this project
+
+Fun fact - **The second free plan API that I found allows users up to 60 calls PER DAY - nothing against it but, for a student project, more is best!**
+
+`It's free!`
 
