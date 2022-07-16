@@ -40,4 +40,32 @@ Since making a commit is something that a developer should know how to make it r
 
 For making it simple, may be a good idea see the [VsCode Git Commit Message extension](https://marketplace.visualstudio.com/items?itemName=rioukkevin.vscode-git-commit) guide;
 
+## Api Usage
 
+For this project we are going to use the [OpenWeatherMap](https://openweathermap.org) API for two main reasons:
+
+1. That API generously free plan allows us up to 60 calls/minute - and for a study webapp that is awesome;
+2. The Free Data is updated every two hours - witch is super okay for this project
+
+Fun fact - **The second free plan API that I found allows users up to 60 calls PER DAY - nothing against it but, for a student project, more is best!**
+
+`It's free!`
+
+## The Design
+
+I trully believe that the hardest part for someone that is not a UI/UX is the UI/UX part.
+So, for that, we are going to use some ideas from web - E.g Pinterest.
+
+Something like that
+
+![Web and non mobile devices](https://cdn.dribbble.com/users/2158940/screenshots/7376567/media/35649246137de1ce1d3f68d4ad1e1ffa.png)
+
+![For Mobile Devices](https://cdn.dribbble.com/users/2822495/screenshots/5771773/weather_4x.png?compress=1&resize=1000x750&vertical=top)
+
+## Date and Time
+
+For that we think the best option is to use [DayJs](https://day.js.org/) for 3 main reasons:
+
+1. Only 2kB for the whole thing
+2. Minimalist and very simple to use
+3. I18n - We will need internationalization for this project

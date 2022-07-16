@@ -1,0 +1,25 @@
+{
+  "name": "wheathervite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dayjs": "^1.11.3",
+    "toastify-js": "^1.11.2",
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@types/toastify-js": "^1.11.1",
+    "@vitejs/plugin-vue": "^3.0.0",
+    "prettier": "2.7.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0",
+    "vue-tsc": "^0.38.4"
+  }
+}
