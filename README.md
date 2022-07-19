@@ -46,6 +46,8 @@ Since making a commit is something that a developer should know how to make it r
 
 [optional footer(s)]
 
+E.g - `git commit -m 'docs: Updating Readme adding a "for Commits" header'`
+
 ## VsCode Git Commit Message
 
 For making it simple, may be a good idea see the [VsCode Git Commit Message extension](https://marketplace.visualstudio.com/items?itemName=rioukkevin.vscode-git-commit) guide;
