@@ -26,6 +26,16 @@ Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
 4. Open the VSCode command palette
 5. Search and run "Select TypeScript version" -> "Use workspace version"
 
+
+## For Branches
+
+We are going to follow [this branch names convention](https://deepsource.io/blog/git-branch-naming-conventions/) witch is simply applyed by the following template:
+
+`'#taskNumber-short-description-of-task-is-about'`
+
+Where `taskNumber` is the task/bug/fix card number from our Board.
+
+
 ## For Commits
 
 Since making a commit is something that a developer should know how to make it right, we are using Conventional Commits messages, following the template below:
