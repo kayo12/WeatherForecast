@@ -1,16 +1,20 @@
 <script setup lang="ts">
-import { ref, useSlots } from "vue";
+import { onBeforeMount, onMounted, ref } from "vue";
 
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
 import dayjs from "dayjs";
 
+import { useI18n } from "vue-i18n";
+
+const i18n = useI18n();
+
 const showToast = () => {
   Toastify({
-    text: "This is a toast",
+    text: i18n.t("toast.success"),
     duration: 3000,
-    destination: "https://github.com/apvarun/toastify-js",
-    newWindow: true,
+    //destination: "https://github.com/apvarun/toastify-js",
+    //newWindow: true,
     close: true,
     gravity: "top", // `top` or `bottom`
     position: "left", // `left`, `center` or `right`
@@ -26,7 +30,12 @@ const now = ref(dayjs());
 
 const updateTime = () => {
   now.value = dayjs();
+  setTimeout(updateTime, 1000);
 };
+
+onBeforeMount(() => {
+  updateTime();
+});
 </script>
 
 <template>
@@ -34,11 +43,11 @@ const updateTime = () => {
     <button type="button" @click="count++">count is {{ count }}</button>
     <button type="button" @click="showToast()">Toast Test</button>
     <button type="button" @click="updateTime()">Update Time</button>
-    <p>Vue + Toastify funcionando :D</p>
+    <p>{{ $t("working") }}</p>
     <p>{{ now.format("YYYY-MM-DD HH:MM:ss") }}</p>
   </div>
   <p>
-    <strong>Feito com café e insônia by:</strong>
+    <strong>{{ $t("greetings") }}</strong>
   </p>
   <p>
     <a href="https://github.com/kayo12" target="_blank">
@@ -53,7 +62,7 @@ const updateTime = () => {
   </p>
 </template>
 
-<style scoped>
+<style scoped lang="stylus">
 .read-the-docs {
   color: #888;
 }

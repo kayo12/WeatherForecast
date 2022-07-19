@@ -1,1 +1,7 @@
-{}
+{
+  "working": "Vue + Toastify funcionando :D",
+  "greetings": "Feito com 🍵, 🍕 e insônia by:",
+  "toast": {
+    "success": "Sucesso"
+  }
+}

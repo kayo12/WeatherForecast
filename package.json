@@ -12,6 +12,8 @@
     "axios": "^0.27.2",
     "dayjs": "^1.11.3",
     "pinia": "^2.0.16",
+    "stylus": "^0.58.1",
+    "stylus-loader": "^7.0.0",
     "toastify-js": "^1.11.2",
     "vue": "^3.2.37",
     "vue-axios": "^3.4.1",
