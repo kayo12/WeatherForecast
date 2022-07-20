@@ -1,7 +1,8 @@
 {
-  "working": "Vue + Toastify funcionando :D",
+  "working": "Vue + Vite + Pinia funcionando :D",
   "greetings": "Feito com 🍵, 🍕 e insônia by:",
   "toast": {
+    "make": "Gere um Toast",
     "success": "Sucesso"
   }
 }

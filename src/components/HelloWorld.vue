@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onBeforeMount, onMounted, ref } from "vue";
+import { onBeforeMount, ref } from "vue";
 
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
@@ -13,11 +13,11 @@ const showToast = () => {
   Toastify({
     text: i18n.t("toast.success"),
     duration: 3000,
-    //destination: "https://github.com/apvarun/toastify-js",
+    //destination: "#",
     //newWindow: true,
     close: true,
     gravity: "top", // `top` or `bottom`
-    position: "left", // `left`, `center` or `right`
+    position: "right", // `left`, `center` or `right`
     stopOnFocus: true, // Prevents dismissing of toast on hover
     style: {
       background: "linear-gradient(to right, #00b09b, #96c93d)",
@@ -40,26 +40,36 @@ onBeforeMount(() => {
 
 <template>
   <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <button type="button" @click="showToast()">Toast Test</button>
-    <button type="button" @click="updateTime()">Update Time</button>
-    <p>{{ $t("working") }}</p>
-    <p>{{ now.format("YYYY-MM-DD HH:MM:ss") }}</p>
+    <button type="button" @click="count--">-</button>
+    <button type="button">count is {{ count }}</button>
+    <button type="button" @click="count++">+</button>
   </div>
-  <p>
-    <strong>{{ $t("greetings") }}</strong>
-  </p>
-  <p>
-    <a href="https://github.com/kayo12" target="_blank">
-      <small>Kayo Henrique</small>
-    </a>
-  </p>
+  <div class="card">
+    <button type="button" @click="showToast">{{ $t("toast.make") }}</button>
+  </div>
+  <div class="card">
+    <p>{{ $t("working") }}</p>
+    <p>
+      <strong>{{ now.format("YYYY-MM-DD HH:MM:ss") }}</strong>
+    </p>
+  </div>
 
-  <p>
-    <a href="https://github.com/Igor-Ponso" target="_blank">
-      <small>Igor Ponso</small>
-    </a>
-  </p>
+  <div class="card">
+    <p>
+      <strong>{{ $t("greetings") }}</strong>
+    </p>
+    <p>
+      <a href="https://github.com/kayo12" target="_blank">
+        <small>Kayo Henrique</small>
+      </a>
+    </p>
+
+    <p>
+      <a href="https://github.com/Igor-Ponso" target="_blank">
+        <small>Igor Ponso</small>
+      </a>
+    </p>
+  </div>
 </template>
 
 <style scoped lang="stylus">
