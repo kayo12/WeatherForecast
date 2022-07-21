@@ -81,3 +81,7 @@ For that we think the best option is to use [DayJs](https://day.js.org/) for 3 m
 1. Only 2kB for the whole thing
 2. Minimalist and very simple to use
 3. I18n - We will need internationalization for this project
+
+## Test Image
+
+![Imagem Chuva](/src/assets/backgroundRain.jpg)
