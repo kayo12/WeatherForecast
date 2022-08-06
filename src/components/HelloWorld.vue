@@ -40,8 +40,9 @@ onBeforeMount(() => {
 
 <template>
   <div class="card">
+    <p v-once>Initial count is {{ count }}</p>
     <button type="button" @click="count--">-</button>
-    <button type="button">count is {{ count }}</button>
+    <span>count is {{ count }}</span>
     <button type="button" @click="count++">+</button>
   </div>
   <div class="card">
@@ -72,8 +73,8 @@ onBeforeMount(() => {
   </div>
 </template>
 
-<style scoped lang="stylus">
-.read-the-docs {
-  color: #888;
-}
+<style lang="stylus" scoped>
+span
+  margin 0 1rem
+
 </style>
