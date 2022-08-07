@@ -29,9 +29,8 @@ const random = Math.floor(Math.random() * props.weatherNow.length);
 
 main
     height var(--doc-height) //for mobile devices that have a navgation bar and/or a menu bar.
-.mist{
+.mist
     background url('../assets/images/mist_desktop.webp') center / cover no-repeat
-}
 .snow
     background url('../assets/images/snow_desktop.webp') center / cover no-repeat
 .rain
