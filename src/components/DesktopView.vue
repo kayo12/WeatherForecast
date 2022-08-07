@@ -6,6 +6,7 @@ export default {
 
 <script setup lang="ts">
 import Info from "../widgets/WeatherInfo/Info.vue";
+import Search from "../widgets/WeatherInfo/Search.vue";
 interface Props {
     weatherNow: string[];
 }
@@ -20,15 +21,20 @@ const random = Math.floor(Math.random() * props.weatherNow.length);
 </script>
 
 <template>
-    <main :class="props.weatherNow[random]">
+    <main :class="props.weatherNow[random]" id="desktopView">
         <Info />
+        <Search />
     </main>
 </template>
 
 <style scoped lang="stylus">
 
-main
+#desktopView
     height var(--doc-height) //for mobile devices that have a navgation bar and/or a menu bar.
+    display flex
+    color: #fff
+    justify-content: space-between;
+
 .mist
     background url('../assets/images/mist_desktop.webp') center / cover no-repeat
 .snow

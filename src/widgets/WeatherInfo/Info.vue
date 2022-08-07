@@ -20,6 +20,5 @@ export default {
         flex-direction column
         justify-content space-between
         height: -webkit-fill-available;
-        div
-            color: #fff
+        color: #fff
 </style>
