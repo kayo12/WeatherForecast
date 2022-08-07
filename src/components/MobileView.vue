@@ -1,26 +1,15 @@
 <script lang="ts">
 export default {
-    name: "DesktopView",
+    name: "MobileView",
 };
 </script>
 
 <script setup lang="ts">
 import Info from "../widgets/WeatherInfo/Info.vue";
-interface Props {
-    weatherNow: string[];
-}
-
-const props = withDefaults(defineProps<Props>(), {
-    weatherNow: () => ['mist', 'snow', 'rain', 'clear', 'clouds', 'wind'],
-})
-
-const random = Math.floor(Math.random() * props.weatherNow.length);
-
-
 </script>
 
 <template>
-    <main :class="props.weatherNow[random]">
+    <main class="rain">
         <Info />
     </main>
 </template>
