@@ -7,6 +7,7 @@ export default {
 <script lang="ts" setup>
 import { reactive } from "vue";
 import glassIcon from "../../assets/icons/glass.svg";
+import WeatherGrid from "./WeatherGrid.vue";
 
 interface Props {
   collapsed: boolean;
@@ -54,7 +55,7 @@ const collapseColumn = () => {
             <input
               id="input-text"
               class="input-text"
-              type="text" 
+              type="text"
               placeholder="Search a City"
               required
             />
@@ -69,9 +70,11 @@ const collapseColumn = () => {
     </div>
     <div v-if="props.collapsed" id="weather-details">
       Weather Details
-      <div v-for="item in props.weatherDetails">
-        {{ item.name }} {{ item.quantity }}
-      </div>
+      <WeatherGrid
+        v-for="info in props.weatherDetails"
+        :name="info.name"
+        :number="info.quantity"
+      />
     </div>
   </div>
 </template>
