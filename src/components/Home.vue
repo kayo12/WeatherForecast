@@ -4,23 +4,20 @@
   <div id="main" class="home">
     <div class="info-home">
       <div class="preview-temp">
-      <div class="date-climate">
-        <span class="degrees">
-          08º
-        </span>
-      </div>
-      <div class="date-climate">  
-        <span class="localization">London</span>
-        <p>06:08 - Sunday, 6 Out 19</p>
-      </div>
-      <div class="date-climate"> 
-        <span class="icon">icon</span>
-        <p>Rain</p>
-      </div>  
+        <div class="date-climate">
+          <span class="degrees"> 08º </span>
+        </div>
+        <div class="date-climate">
+          <span class="localization">London</span>
+          <p>06:08 - Sunday, 6 Out 19</p>
+        </div>
+        <div class="date-climate">
+          <span class="icon">icon</span>
+          <p>Rain</p>
+        </div>
       </div>
     </div>
-    <div class="form">
-    </div>
+    <div class="form"></div>
   </div>
 </template>
 
@@ -73,7 +70,4 @@
           background-color: rgba(0,0,0,0.4);
             backdrop-filter: blur(7px);
   }
-
-
-  
 </style>
