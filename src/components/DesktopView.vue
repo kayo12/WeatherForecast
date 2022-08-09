@@ -1,6 +1,6 @@
 <script lang="ts">
 export default {
-    name: "DesktopView",
+  name: "DesktopView",
 };
 </script>
 
@@ -8,23 +8,21 @@ export default {
 import Info from "../widgets/WeatherInfo/Info.vue";
 import Search from "../widgets/WeatherInfo/Search.vue";
 interface Props {
-    weatherNow: string[];
+  weatherNow: string[];
 }
 
 const props = withDefaults(defineProps<Props>(), {
-    weatherNow: () => ['mist', 'snow', 'rain', 'clear', 'clouds', 'wind'],
-})
+  weatherNow: () => ["mist", "snow", "rain", "clear", "clouds", "wind"],
+});
 
 const random = Math.floor(Math.random() * props.weatherNow.length);
-
-
 </script>
 
 <template>
-    <main :class="props.weatherNow[random]" id="desktopView">
-        <Info />
-        <Search />
-    </main>
+  <main :class="props.weatherNow[random]" id="desktopView">
+    <Info />
+    <Search />
+  </main>
 </template>
 
 <style scoped lang="stylus">
@@ -34,6 +32,7 @@ const random = Math.floor(Math.random() * props.weatherNow.length);
     display flex
     color: #fff
     justify-content: space-between;
+    overflow hidden
 
 .mist
     background url('../assets/images/mist_desktop.webp') center / cover no-repeat

@@ -6,9 +6,7 @@ import MobileView from "./components/MobileView.vue";
 const isMobile = ref(false);
 
 const getWidth = () => {
-  window.innerWidth >= 768
-    ? (isMobile.value = false)
-    : (isMobile.value = true);
+  window.innerWidth >= 768 ? (isMobile.value = false) : (isMobile.value = true);
 };
 
 const documentHeight = () => {

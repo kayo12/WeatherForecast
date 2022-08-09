@@ -76,5 +76,4 @@ onBeforeMount(() => {
 <style lang="stylus" scoped>
 span
   margin 0 1rem
-
 </style>
