@@ -6,6 +6,7 @@ export default {
 
 <script lang="ts" setup>
 import { reactive } from "vue";
+import { useI18n } from "vue-i18n";
 import glassIcon from "../../assets/icons/glass.svg";
 import WeatherGrid from "./WeatherGrid.vue";
 
@@ -39,6 +40,8 @@ const props = reactive<Props>({
 const collapseColumn = () => {
   props.collapsed = !props.collapsed;
 };
+
+const i18n = useI18n();
 </script>
 
 <template>
@@ -51,7 +54,7 @@ const collapseColumn = () => {
               id="input-text"
               class="input-text"
               type="text"
-              placeholder="Search a City"
+              :placeholder="i18n.t('homepage.search_city')"
               required
             />
           </label>
@@ -81,25 +84,34 @@ const collapseColumn = () => {
     background: rgba( 0, 0, 0, 0.4 )
     backdrop-filter: blur( 10.5px )
     -webkit-backdrop-filter: blur( 10.5px )
-    min-width 4.5rem
+    min-width 100px
     justify-content: space-between
     button
         background #829f9a
         border none
-        padding 1.5rem
+        height 100%
+        width 100%
         img
-          width 1.5rem
+          width 1.85rem
     #search-area
         transition all 500ms
-    .search-button 
+        display flex
+        flex-direction column
+        justify-content space-between
+        padding 0 0 2.5rem 2.5rem
+    .search-button
       position absolute
       right 0
+      height 6.25rem
+      width 100px
     .input-area
       display: flex;
       align-items: self-end;
+      height 100px
     .input-text
         background transparent
         border none
-        border-bottom 1px solid gray
+        border-bottom 1px solid #828887
+        padding-bottom 0.5rem
         outline none
 </style>

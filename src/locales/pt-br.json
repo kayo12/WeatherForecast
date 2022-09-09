@@ -1,8 +1,17 @@
 {
-  "working": "Vue + Vite + Pinia funcionando :D",
-  "greetings": "Feito com 🍵, 🍕 e insônia by:",
+  "homepage": {
+    "search_city": "Procure uma cidade",
+    "weather_deails": "Detalhes do clima"
+  },
+  "weather": {
+    "cloudy": "Nublado",
+    "rain": "Chuva",
+    "snow": "Neve",
+    "clear": "Limpo",
+    "mist": "Névoa"
+  },
   "toast": {
-    "make": "Gere um Toast",
-    "success": "Sucesso"
+    "success": "Sucesso",
+    "error": "Erro: "
   }
 }
