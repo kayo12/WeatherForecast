@@ -42,13 +42,8 @@ const collapseColumn = () => {
 </script>
 
 <template>
-  <div id="desktop-search" :style="{ width: props.collapsed ? '35%' : '5%' }">
-    <div
-      id="search-area"
-      :style="{
-        justifyContent: props.collapsed ? 'space-between' : 'flex-end',
-      }"
-    >
+  <div id="desktop-search" :style="{ width: props.collapsed ? '40%' : '0%' }">
+    <div id="search-area">
       <div v-if="props.collapsed" class="input-area">
         <form>
           <label for="input-text">
@@ -62,19 +57,19 @@ const collapseColumn = () => {
           </label>
         </form>
       </div>
-      <div>
-        <button @click="collapseColumn()">
-          <img :src="glassIcon" alt="clock" />
-        </button>
+      <div v-if="props.collapsed" id="weather-details" class="active">
+        Weather Details
+        <WeatherGrid
+          v-for="info in props.weatherDetails"
+          :name="info.name"
+          :number="info.quantity"
+        />
       </div>
     </div>
-    <div v-if="props.collapsed" id="weather-details">
-      Weather Details
-      <WeatherGrid
-        v-for="info in props.weatherDetails"
-        :name="info.name"
-        :number="info.quantity"
-      />
+    <div class="search-button">
+      <button @click="collapseColumn()">
+        <img :src="glassIcon" alt="clock" />
+      </button>
     </div>
   </div>
 </template>
@@ -82,17 +77,23 @@ const collapseColumn = () => {
 <style lang="stylus" scoped>
 #desktop-search
     transition all 500ms
-    padding  0 0 2rem
+    display flex
     background: rgba( 0, 0, 0, 0.4 )
     backdrop-filter: blur( 10.5px )
     -webkit-backdrop-filter: blur( 10.5px )
-    min-width 4rem
-    padding 0 0 0 3rem
+    min-width 4.5rem
+    justify-content: space-between
     button
         background #829f9a
         border none
+        padding 1.5rem
+        img
+          width 1.5rem
     #search-area
-        display flex
+        transition all 500ms
+    .search-button 
+      position absolute
+      right 0
     .input-area
       display: flex;
       align-items: self-end;
