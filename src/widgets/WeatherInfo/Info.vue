@@ -4,7 +4,8 @@ export default {
 };
 </script>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <template>
   <div id="weather-main">
@@ -16,7 +17,7 @@ export default {
         <span>Location</span>
         <small>TimeStamp info</small>
       </div>
-      <span class="weather-icon">Icon</span>
+      <span class="weather-icon"><img src="/src/assets/icons/animated/snowy-3.svg" alt="" /></span>
     </div>
   </div>
 </template>
@@ -36,7 +37,7 @@ export default {
       display flex
       gap 1rem
       font-size 4rem
-  
+
 #weather-location
   display flex
   flex-direction column
@@ -44,5 +45,4 @@ export default {
     font-size 2rem
   small
     font-size 1rem
-
 </style>

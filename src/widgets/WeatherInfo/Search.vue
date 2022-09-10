@@ -85,7 +85,6 @@ const i18n = useI18n();
     backdrop-filter: blur( 10.5px )
     -webkit-backdrop-filter: blur( 10.5px )
     min-width 5rem
-    justify-content: space-between
     button
         background #829f9a
         border none
@@ -94,11 +93,12 @@ const i18n = useI18n();
         img
           width 1.85rem
     #search-area
+        width 100%
         transition all 500ms
         display flex
         flex-direction column
         justify-content space-between
-        padding 0 0 2.5rem 2.5rem
+        padding 0 2.5rem 2.5rem 2.5rem
     .search-button
       position absolute
       right 0
@@ -115,4 +115,5 @@ const i18n = useI18n();
         border-bottom 2px solid #828887
         padding-bottom 0.5rem
         outline none
+        font-size 1rem
 </style>
