@@ -7,7 +7,7 @@ export default {
 <script lang="ts" setup>
 import { reactive } from "vue";
 import { useI18n } from "vue-i18n";
-import glassIcon from "../../assets/icons/glass.svg";
+import glassIcon from "../../assets/icons/animated/glass.webp";
 import WeatherGrid from "./WeatherGrid.vue";
 
 interface Props {
@@ -84,7 +84,7 @@ const i18n = useI18n();
     background: rgba( 0, 0, 0, 0.4 )
     backdrop-filter: blur( 10.5px )
     -webkit-backdrop-filter: blur( 10.5px )
-    min-width 100px
+    min-width 5rem
     justify-content: space-between
     button
         background #829f9a
@@ -103,15 +103,16 @@ const i18n = useI18n();
       position absolute
       right 0
       height 6.25rem
-      width 100px
+      width 5rem
+      height 5rem
     .input-area
       display: flex;
       align-items: self-end;
-      height 100px
+      height 5rem
     .input-text
         background transparent
         border none
-        border-bottom 1px solid #828887
+        border-bottom 2px solid #828887
         padding-bottom 0.5rem
         outline none
 </style>
